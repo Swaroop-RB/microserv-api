@@ -1,0 +1,10 @@
+{
+  "name": "microservices-project",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start:all": "concurrently \"nodemon services/user-service/src/index.js\" \"nodemon services/student-service/src/index.js\" \"nodemon services/course-service/src/index.js\" \"nodemon services/college-service/src/index.js\""
+}}
